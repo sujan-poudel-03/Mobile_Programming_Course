@@ -13,18 +13,12 @@
         android:orientation="horizontal"
         tools:ignore="MissingConstraints">
 
-        <TextView
-            android:id="@+id/course_layout_1"
+        <ListView
+            android:id = "@+id/chapter_list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Chapter 1" />
-
-        <TextView
-            android:id="@+id/course_layout_2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Chapter 2" />
-
+            tools:ignore="MissingConstraint"
+            />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
