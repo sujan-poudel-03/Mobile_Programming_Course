@@ -18,7 +18,6 @@ public class MainActivity extends AppCompatActivity {
 
         EditText emailText = findViewById(R.id.email_input);
         EditText passwordText = findViewById(R.id.password_input);
-
         Button loginBtn = findViewById(R.id.login_button);
 
         loginBtn.setOnClickListener(new View.OnClickListener() {

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/chapter_1"
+        android:title="Chapter 1"
+        />
+
+    <item
+        android:id="@+id/chapter_2"
+        android:title="Chapter 2"
+        />
+
+    <item
+        android:id="@+id/chapter_3"
+        android:title="Chapter 3">
+
+        <menu>
+            <item
+                android:id="@+id/chapter_3_layout"
+                android:title="Android Layout" >
+
+                <menu>
+                    <item
+                        android:id="@+id/chapter_3_layout_linear_layout"
+                        android:title="Linear Layout"
+                        />
+                </menu>
+
+            </item>
+        </menu>
+
+    </item>
+
+
+</menu>

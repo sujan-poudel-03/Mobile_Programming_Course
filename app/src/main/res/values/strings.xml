@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Mobile_Programming_Course</string>
+    <string-array name="items_array">
+        <item>BCA</item>
+        <item>BSc.CSIT</item>
+        <item>BBA</item>
+        <item>BBS</item>
+    </string-array>
 </resources>
