@@ -24,9 +24,20 @@
                         android:id="@+id/chapter_3_layout_linear_layout"
                         android:title="Linear Layout"
                         />
+                    <item
+                        android:id="@+id/chapter_3_layout_relative_layout"
+                        android:title="Relative Layout"
+                        />
+                    <item
+                        android:id="@+id/chapter_3_layout_constraint_layout"
+                        android:title="Constraint Layout"
+                        />
                 </menu>
-
             </item>
+            <item
+                android:id="@+id/chapter_3_event_listener"
+                android:title="Event Listener" />
+
         </menu>
 
     </item>
