@@ -1,160 +1,147 @@
 package com.example.mobile_programming_course;
 
-import androidx.appcompat.app.AppCompatActivity;
+import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.view.GestureDetector;
+import android.util.Log;
+import android.view.DragEvent;
+import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.ScrollView;
+import android.widget.SeekBar;
+import android.widget.Spinner;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 public class EventListener extends AppCompatActivity {
-
-    private ImageView imageView;
-    private Button buttonClick;
-    private EditText editText;
-    private ScrollView scrollView;
-    private GestureDetector gestureDetector;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event_listener);
 
-        imageView = findViewById(R.id.imageView);
-        buttonClick = findViewById(R.id.buttonClick);
-        editText = findViewById(R.id.editText);
-        scrollView = findViewById(R.id.scrollView);
-
-        // Image View Touch
-        imageView.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View view, MotionEvent motionEvent) {
-                switch (motionEvent.getAction()){
-                    case MotionEvent.ACTION_DOWN:
-                        Toast.makeText(EventListener.this, "Image View Touched", Toast.LENGTH_SHORT).show();
-                        return true;
-                }
-                return false;
-            }
-        });
-        imageView.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View view) {
-                return false;
-            }
-        });
-
-        // Button View Long Click
-        buttonClick.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View view) {
-                Toast.makeText(EventListener.this, "Ready to download", Toast.LENGTH_SHORT).show();
-                return false;
-            }
-        });
-
-        // Button click listener
-        buttonClick.setOnClickListener(new View.OnClickListener() {
+        // OnClickListener
+        Button myButton = findViewById(R.id.my_button);
+        myButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(EventListener.this, "Button Clicked", Toast.LENGTH_SHORT).show();
+                // Handle button click
+                new AlertDialog.Builder(EventListener.this)
+                        .setTitle("Clicked")
+                        .setMessage("Button Clicked!")
+                        .setPositiveButton("OK", null)
+                        .show();
             }
         });
 
-        // EditText text change listener
-        editText.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-                // Code to execute before text is changed
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                // Code to execute when text is changing
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-                // Code to execute after text has changed
-                Toast.makeText(EventListener.this, "Text Changed: " + s.toString(), Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        // View touch listener
-        editText.setOnTouchListener(new View.OnTouchListener() {
+        // OnTouchListener
+        View myView = findViewById(R.id.my_view);
+        myView.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                switch (event.getAction()) {
-                    case MotionEvent.ACTION_DOWN:
-                        Toast.makeText(EventListener.this, "View Touched", Toast.LENGTH_SHORT).show();
-                        return true;
-                }
-                return false;
+                // Handle touch event
+                Toast.makeText(EventListener.this, "On Touch Listener", Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(EventListener.this, FileUpload.class);
+                startActivity(i);
+                return true;
+
             }
         });
 
-        // View long click listener
-        editText.setOnLongClickListener(new View.OnLongClickListener() {
+        // OnLongClickListener
+        Button myLongClickButton = findViewById(R.id.my_long_click_button);
+        myLongClickButton.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                Toast.makeText(EventListener.this, "Long Click Detected", Toast.LENGTH_SHORT).show();
+                // Handle long click
+                new AlertDialog.Builder(EventListener.this)
+                        .setTitle("Long Clicked")
+                        .setMessage("Long Clicked Button!")
+                        .setPositiveButton("OK", null)
+                        .show();
                 return true;
             }
         });
 
-        // View focus change listener
-        editText.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+        // TextWatcher
+        EditText myEditText = findViewById(R.id.my_edit_text);
+        myEditText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                // Before text is changed
+                Log.d(TAG, "Before text changed: " + s.toString());
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                // Text is being changed
+                Log.d(TAG, "Text is changing: " + s.toString());
+                Toast.makeText(EventListener.this, "Text is changing: " + s.toString(), Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                // After text is changed
+                Log.d(TAG, "After text changed: " + s.toString());
+            }
+        });
+
+        // OnFocusChangeListener
+        myEditText.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
-                if (hasFocus) {
-                    Toast.makeText(EventListener.this, "EditText Focused", Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(EventListener.this, "EditText Lost Focus", Toast.LENGTH_SHORT).show();
-                }
+                // Handle focus change
             }
         });
 
-        // ScrollView scroll listener
-        scrollView.setOnTouchListener(new View.OnTouchListener() {
-            private float y1, y2;
-
+        // OnCheckedChangeListener
+        CheckBox myCheckBox = findViewById(R.id.my_check_box);
+        myCheckBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                switch (event.getAction()) {
-                    case MotionEvent.ACTION_DOWN:
-                        y1 = event.getY();
-                        return false;
-                    case MotionEvent.ACTION_UP:
-                        y2 = event.getY();
-                        if (y1 < y2) {
-                            Toast.makeText(EventListener.this, "Scrolling Down", Toast.LENGTH_SHORT).show();
-                        } else if (y1 > y2) {
-                            Toast.makeText(EventListener.this, "Scrolling Up", Toast.LENGTH_SHORT).show();
-                        }
-                        return false;
-                }
-                return false;
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                // Handle check state change
             }
         });
 
-        // Gesture detector for handling scrolls
-        gestureDetector = new GestureDetector(this, new GestureDetector.SimpleOnGestureListener() {
+        // OnSeekBarChangeListener
+        SeekBar mySeekBar = findViewById(R.id.my_seek_bar);
+        mySeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
-            public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY) {
-                if (distanceY > 0) {
-                    Toast.makeText(EventListener.this, "Scrolling Up", Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(EventListener.this, "Scrolling Down", Toast.LENGTH_SHORT).show();
-                }
-                return super.onScroll(e1, e2, distanceX, distanceY);
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                // Handle progress change
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+                // Handle start of touch
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+                // Handle stop of touch
+            }
+        });
+
+        // OnDragListener
+        View myDragView = findViewById(R.id.my_drag_view);
+        myDragView.setOnDragListener(new View.OnDragListener() {
+            @Override
+            public boolean onDrag(View v, DragEvent event) {
+                // Handle drag event
+                return true;
             }
         });
     }
+
 }
