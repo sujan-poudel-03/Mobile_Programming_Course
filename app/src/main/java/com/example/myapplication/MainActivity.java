@@ -1,6 +1,9 @@
 package com.example.myapplication;
 
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
@@ -9,6 +12,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+
+import java.util.zip.Inflater;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -41,7 +46,11 @@ public class MainActivity extends AppCompatActivity {
                 loadFragment(new GridViewFragment());
             }
         });
+
+
     }
+
+
 
     private void loadFragment(Fragment fragment){
         // Create a  new fragment and transaction
@@ -50,4 +59,25 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction.replace(R.id.view_frame_container, fragment);
         fragmentTransaction.commit();
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+//        return super.onCreateOptionsMenu(menu);
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_items, menu);
+
+        return true;
+    }
+
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item){
+//        switch (item.getItemId()) {
+//            case R.menu.id.profile:
+//               return true;
+//
+//               default:
+//                   return super.onOptionsItemSelected(item);
+//        }
+//    }
+
 }
