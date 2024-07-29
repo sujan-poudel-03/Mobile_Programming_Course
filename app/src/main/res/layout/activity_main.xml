@@ -33,7 +33,17 @@
     <FrameLayout
         android:id="@+id/view_frame_container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/btn1" />
+
+    <Button
+        android:id="@+id/show_dialog_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/profile"
+        android:layout_below="@id/view_frame_container"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="81dp"
+        tools:layout_editor_absoluteY="223dp" />
 
 </RelativeLayout>
