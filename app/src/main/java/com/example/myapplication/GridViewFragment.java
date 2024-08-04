@@ -11,6 +11,11 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+<<<<<<< Updated upstream
+=======
+import android.widget.ArrayAdapter;
+import android.widget.GridView;
+>>>>>>> Stashed changes
 
 public class GridViewFragment extends Fragment {
 
@@ -20,6 +25,7 @@ public class GridViewFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_grid_view, container, false);
 
+<<<<<<< Updated upstream
         // Register the view for context menu
         View myView = view.findViewById(R.id.context_menu);
         registerForContextMenu(myView);
@@ -63,5 +69,16 @@ public class GridViewFragment extends Fragment {
 //        }
 //    }
 
+=======
+        GridView gridView = (GridView) view.findViewById(R.id.grid_view_item);
+        String noodels[] = {"waiwai","rumpum", "current","preeti"};
+
+        final ArrayAdapter<String>  adapter = new ArrayAdapter<String>(getActivity(),
+                android.R.layout.simple_list_item_1,noodels);
+        gridView.setAdapter(adapter);
+
+        return view;
+    }
+>>>>>>> Stashed changes
 
 }

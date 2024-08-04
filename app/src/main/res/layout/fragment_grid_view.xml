@@ -6,6 +6,7 @@
     tools:context=".GridViewFragment">
 
     <!-- TODO: Update blank fragment layout -->
+<<<<<<< Updated upstream
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -18,5 +19,26 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:text="Context Menu" />
+=======
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:text="This is a Gridview Fragment" />
+
+        <GridView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="3"
+            android:id="@+id/grid_view_item"
+            tools:ignore="MissingConstraints" />
+
+    </LinearLayout>
+>>>>>>> Stashed changes
 
 </FrameLayout>

@@ -6,6 +6,7 @@
     tools:context=".ListViewFragment">
 
     <!-- TODO: Update blank fragment layout -->
+<<<<<<< Updated upstream
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -17,5 +18,37 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:text="Popup Menu" />
+=======
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:text="This is a listview fragment" />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="40dp"
+            android:text="Food Items"
+            android:textStyle="bold"
+            android:textColor="@color/material_dynamic_primary0"
+            android:layout_marginTop="10dp"
+            tools:ignore="MissingConstraints" />
+
+
+        <ListView
+            android:id="@+id/listview_item"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            />
+
+    </LinearLayout>
+
+>>>>>>> Stashed changes
 
 </FrameLayout>

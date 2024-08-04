@@ -10,12 +10,19 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+<<<<<<< Updated upstream
 import android.widget.Button;
+=======
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ListView;
+>>>>>>> Stashed changes
 import android.widget.PopupMenu;
 import android.widget.Toast;
 
 public class ListViewFragment extends Fragment {
 
+<<<<<<< Updated upstream
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
@@ -29,6 +36,9 @@ public class ListViewFragment extends Fragment {
         Toast.makeText(getActivity(), ":Fragment ListView : onCreate", Toast.LENGTH_SHORT).show();
         Log.d("TAG", "onCreate");
     }
+=======
+
+>>>>>>> Stashed changes
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -37,6 +47,7 @@ public class ListViewFragment extends Fragment {
         Log.d("TAG", "onCreateView");
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_list_view, container, false);
+<<<<<<< Updated upstream
 
         // Initialize your button here
         Button button = view.findViewById(R.id.popup_menu); // Correct context for findViewById
@@ -132,4 +143,17 @@ public class ListViewFragment extends Fragment {
 
         popup.show();
     }
+=======
+        ListView listView = (ListView) view.findViewById(R.id.listview_item);
+
+        String food_listItem[] = {"Fulki", "Pani Puri", "Chawmin", "PIZZA", "MOMO", "Samosa", "Pakauda"};
+
+        //Default Listview
+        final ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(),
+                android.R.layout.simple_list_item_1, food_listItem);
+        listView.setAdapter(adapter);
+
+        return view;
+    }
+>>>>>>> Stashed changes
 }
