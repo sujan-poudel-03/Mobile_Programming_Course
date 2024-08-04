@@ -6,19 +6,6 @@
     tools:context=".ListViewFragment">
 
     <!-- TODO: Update blank fragment layout -->
-<<<<<<< Updated upstream
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="This is a listview fragment" />
-
-    <Button
-        android:id="@+id/popup_menu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="Popup Menu" />
-=======
 <!--    <TextView-->
 <!--        android:layout_width="match_parent"-->
 <!--        android:layout_height="match_parent"-->
@@ -49,6 +36,5 @@
 
     </LinearLayout>
 
->>>>>>> Stashed changes
 
 </FrameLayout>

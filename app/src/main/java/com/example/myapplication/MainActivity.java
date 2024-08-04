@@ -2,20 +2,14 @@ package com.example.myapplication;
 
 import android.content.Intent;
 import android.os.Bundle;
-<<<<<<< Updated upstream
-=======
 import android.view.ContextMenu;
->>>>>>> Stashed changes
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
-<<<<<<< Updated upstream
-=======
 import android.widget.PopupMenu;
->>>>>>> Stashed changes
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
@@ -23,11 +17,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-<<<<<<< Updated upstream
-import com.example.myapplication.R;
-=======
 
->>>>>>> Stashed changes
 
 public class MainActivity extends AppCompatActivity {
 
@@ -36,37 +26,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-<<<<<<< Updated upstream
-        Button listView = (Button) findViewById(R.id.btn1);
-        Button gridView = findViewById(R.id.btn2);
-        Button recyclerView = findViewById(R.id.btn3);
-
-        recyclerView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
-                startActivity(intent);
-
-            }
-        });
-
-        FrameLayout viewFrameContainer = findViewById(R.id.view_frame_container);
-
-        Button showDialogButton = findViewById(R.id.show_dialog_button);
-        showDialogButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showDialog();
-            }
-        });
-
-=======
         Button listView = (Button) findViewById(R.id.list_view_btn);
         Button gridView = findViewById(R.id.grid_view_btn);
         Button recyclerView = findViewById(R.id.recycler_view_btn);
         FrameLayout viewFrameContainer = findViewById(R.id.view_frame_container);
         Button showDialogButton = findViewById(R.id.show_dialog_button);
->>>>>>> Stashed changes
 
         listView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -87,8 +51,6 @@ public class MainActivity extends AppCompatActivity {
                 loadFragment(new GridViewFragment());
             }
         });
-<<<<<<< Updated upstream
-=======
 
         recyclerView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -122,7 +84,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
->>>>>>> Stashed changes
     }
 
     private void loadFragment(Fragment fragment){
@@ -133,34 +94,17 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction.commit();
     }
 
-<<<<<<< Updated upstream
-=======
 
->>>>>>> Stashed changes
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
 
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu_items, menu);
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
         return true;
     }
 
 //    @Override
 //    public boolean onOptionsItemSelected(MenuItem item) {
-<<<<<<< Updated upstream
-//        // Handle item selection
-//        switch (item.getItemId()) {
-//            case R.id.profile:
-//                openProfile();
-//                return true;
-//            case R.id.logout:
-//                logout();
-//                return true;
-=======
 //        switch (item.getItemId()) {
 //            case R.id.profile_id:
 //                Toast.makeText(this, "Profile clicked", Toast.LENGTH_SHORT).show();
@@ -168,26 +112,11 @@ public class MainActivity extends AppCompatActivity {
 //
 //            // Handle other menu items here
 //
->>>>>>> Stashed changes
 //            default:
 //                return super.onOptionsItemSelected(item);
 //        }
 //    }
 
-<<<<<<< Updated upstream
-    private void openProfile() {
-        // Code to open profile activity or fragment
-        Intent intent = new Intent(this, ProfileActivity.class);
-        startActivity(intent);
-    }
-
-    private void logout() {
-        // Code to log out the user
-        // For example, clearing session data or navigating to the login screen
-        Toast.makeText(this, "Logged out", Toast.LENGTH_SHORT).show();
-        finish();
-    }
-=======
 
     @Override
     public void onCreateContextMenu(ContextMenu contextMenu, View view, ContextMenu.ContextMenuInfo menuInfo){
@@ -204,7 +133,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
->>>>>>> Stashed changes
     private void showDialog() {
         // Create an AlertDialog.Builder
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -225,8 +153,6 @@ public class MainActivity extends AppCompatActivity {
         dialog.show();
     }
 
-<<<<<<< Updated upstream
-=======
     private void openProfile() {
         // Code to open profile activity or fragment
         Intent intent = new Intent(this, ProfileActivity.class);
@@ -239,7 +165,6 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, "Logged out", Toast.LENGTH_SHORT).show();
         finish();
     }
->>>>>>> Stashed changes
 
 
     }

@@ -7,56 +7,33 @@
     android:layout_height="match_parent">
 
     <Button
-<<<<<<< Updated upstream
-        android:id="@+id/btn1"
-=======
         android:id="@+id/list_view_btn"
->>>>>>> Stashed changes
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:text="ListView" />
 
     <Button
-<<<<<<< Updated upstream
-        android:id="@+id/btn2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_toRightOf="@+id/btn1"
-=======
         android:id="@+id/grid_view_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_toRightOf="@+id/list_view_btn"
->>>>>>> Stashed changes
         android:text="GridView" />
 
 
     <Button
-<<<<<<< Updated upstream
-        android:id="@+id/btn3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_toRightOf="@+id/btn2"
-=======
         android:id="@+id/recycler_view_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_toRightOf="@+id/grid_view_btn"
->>>>>>> Stashed changes
         android:text="Recycler View" />
 
     <FrameLayout
         android:id="@+id/view_frame_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-<<<<<<< Updated upstream
-        android:layout_below="@+id/btn1" />
-=======
         android:layout_below="@+id/list_view_btn" />
 
     <Button
@@ -79,19 +56,13 @@
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="81dp"
         tools:layout_editor_absoluteY="223dp" />
->>>>>>> Stashed changes
 
     <Button
         android:id="@+id/show_dialog_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-<<<<<<< Updated upstream
-        android:text="@string/profile"
-        android:layout_below="@id/view_frame_container"
-=======
         android:text="Dialog Button"
         android:layout_below="@id/popup_menu"
->>>>>>> Stashed changes
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="81dp"
         tools:layout_editor_absoluteY="223dp" />
