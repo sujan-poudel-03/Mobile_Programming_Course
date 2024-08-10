@@ -67,4 +67,11 @@
         tools:layout_editor_absoluteX="81dp"
         tools:layout_editor_absoluteY="223dp" />
 
+    <Button
+        android:id="@+id/database_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Database"
+        android:layout_below="@id/show_dialog_button"/>
+
 </RelativeLayout>

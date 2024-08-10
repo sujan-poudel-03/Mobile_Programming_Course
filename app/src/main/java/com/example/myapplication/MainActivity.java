@@ -84,6 +84,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button database_btn = (Button) findViewById(R.id.database_btn);
+        database_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SqliteActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
 
     private void loadFragment(Fragment fragment){
