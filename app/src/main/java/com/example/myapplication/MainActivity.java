@@ -93,6 +93,24 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button volley_btn = findViewById(R.id.volley_id);
+        volley_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, VolleyActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button google_map_btn = findViewById(R.id.google_map_id);
+        google_map_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, GoogleMapActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
     }
 

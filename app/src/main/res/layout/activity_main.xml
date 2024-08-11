@@ -74,4 +74,19 @@
         android:text="Database"
         android:layout_below="@id/show_dialog_button"/>
 
+    <Button
+        android:id="@+id/volley_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Volley"
+        android:layout_below="@id/database_btn"/>
+
+    <Button
+        android:id="@+id/google_map_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Google Map"
+        android:layout_below="@id/volley_id"/>
+
+
 </RelativeLayout>

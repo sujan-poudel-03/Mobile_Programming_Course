@@ -29,6 +29,11 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+    repositories {
+        google()
+        mavenCentral()
+    }
+
 }
 
 dependencies {
@@ -40,4 +45,7 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+    implementation("com.android.volley:volley:1.2.1")
+    implementation("com.google.android.gms:play-services-maps:18.0.0")
+
 }
