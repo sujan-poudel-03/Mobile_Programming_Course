@@ -6,50 +6,53 @@
     android:layout_height="match_parent"
     tools:context=".VolleyActivity">
 
-    <EditText
-        android:id="@+id/titleEditText"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:hint="Title"
-        app:layout_constraintBottom_toTopOf="@id/bodyEditText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+    <LinearLayout
+        android:id="@+id/getLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="80dp"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <EditText
-        android:id="@+id/bodyEditText"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:hint="Body"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/titleEditText"
-        app:layout_constraintBottom_toTopOf="@id/sendButton"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintEnd_toEndOf="parent">
 
-    <Button
-        android:id="@+id/sendButton"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/getDataTextView"
+            tools:ignore="MissingConstraints" />
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Send POST"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="vertical"
+        android:layout_marginTop="100dp"
+        app:layout_constraintTop_toBottomOf="@id/getLayout"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintEnd_toEndOf="parent">
 
-    <Button
-        android:id="@+id/getButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Send GET"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/sendButton"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintVertical_bias="0.0" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/titleEditText"
+            android:hint="Title here"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bodyEditText"
+            android:hint="Body here.."/>
+        <Button
+            android:id="@+id/postBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="POST" />
 
+        <Button
+            android:id="@+id/getBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GET" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

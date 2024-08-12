@@ -14,7 +14,7 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 public class GoogleMapActivity extends AppCompatActivity implements OnMapReadyCallback {
-
+    GoogleMap newMap;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,7 +30,7 @@ public class GoogleMapActivity extends AppCompatActivity implements OnMapReadyCa
 
     @Override
     public void onMapReady(@NonNull GoogleMap googleMap) {
-        GoogleMap newMap = googleMap;
+        newMap = googleMap;
         //Adding latitude and longitude
         LatLng location = new LatLng(26,100);
 
